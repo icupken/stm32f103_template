@@ -5,6 +5,8 @@
 use cortex_m_rt::entry; // The runtime
 use embedded_hal::digital::v2::OutputPin; // the `set_high` and `set_low` function
 #[allow(unused_imports)]
+use defmt::*;
+use defmt_rtt as _;
 use panic_halt; // When a panic occurs, simply stop the microcontroller
 use stm32f1xx_hal::{delay::Delay, pac, prelude::*}; // STM32F1 specific functions
 
